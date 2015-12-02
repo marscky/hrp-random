@@ -1,0 +1,102 @@
+$font-stack: 'Titillium Web', Helvetica, Arial, sans-serif;
+
+body {
+  color: #444;
+  font-family: $font-stack;
+  font-weight: 300;
+  margin: 0 auto;
+  padding: 16px;
+  width: 600px;
+}
+
+input {
+  border: none;
+  color: #444;
+  font-family: $font-stack;
+  font-size: 16px;
+  font-weight: 300;
+  outline: none;
+}
+
+$border-bottom-inactive: 1px dashed rgb(123,123,123);
+$border-bottom-active: 1px solid orange;
+
+#info {
+  margin-bottom: 10px;
+}
+
+#typenum {
+  border-bottom: $border-bottom-inactive;
+  margin-left: 10px;
+  text-align: center;
+  transition: border-bottom 0.3s ease;
+  width: 50px;
+
+  &:focus {
+    border-bottom: $border-bottom-active;
+  }
+}
+
+#groups {
+  margin-bottom: 10px;
+}
+
+.group {
+  td:nth-child(-n+2) {
+    input {
+      border-bottom: 1px dashed gray;
+      padding: 10px;
+      transition: border-bottom 0.3s ease;
+
+      &:focus {
+        border-bottom: $border-bottom-active;
+      }
+    }
+  }
+
+  td:nth-child(n+3) {
+    input {
+      width: 90px;
+    }
+  }
+}
+
+input[type="button"] {
+  background-color: transparent;
+  border: 2px solid rgb(123,123,123);
+  background: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    border: 2px solid orange;
+  }
+
+  &:active {
+    background-color: orange;
+    color: white;
+  }
+}
+
+#results {
+  margin-top: 10px;
+}
+
+.groupChar {
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+
+  span {
+    background-color: #333;
+    color: #fff;
+    border-radius: 12px;
+    display: inline-block;
+    height: 24px;
+    margin-right: 6px;
+    text-align: center;
+    width: 24px;
+  }
+}

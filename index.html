@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HRP Randomiser</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>HRP Randomiser</h1>
+  <div id="source">
+    <div id="info">
+      Types of questionnaire <input type="number" id="typenum" placeholder="Number of groups" min="1" value="3" required>
+    </div>
+
+    <table id="groups">
+      <tr class="group">
+        <td><input type="text" class="class" placeholder="Class"></td>
+        <td><input type="number" class="studentnum" placeholder="Number of student" min="1"></td>
+        <td><input type="button" class="remove" value="Remove"></td>
+        <td><input type="button" class="add" value="Add"></td>
+      </tr>
+    </table>
+    <input type="button" id="randomise" value="Randomise!">
+  </div>
+
+  <h2>Results</h2>
+  <div id="results">
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="random.js"></script>
+</body>
+</html>

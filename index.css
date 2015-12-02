@@ -1,0 +1,70 @@
+body {
+  color: #444;
+  font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 0 auto;
+  padding: 16px;
+  width: 600px; }
+
+input {
+  border: none;
+  color: #444;
+  font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  outline: none; }
+
+#info {
+  margin-bottom: 10px; }
+
+#typenum {
+  border-bottom: 1px dashed #7b7b7b;
+  margin-left: 10px;
+  text-align: center;
+  transition: border-bottom 0.3s ease;
+  width: 50px; }
+  #typenum:focus {
+    border-bottom: 1px solid orange; }
+
+#groups {
+  margin-bottom: 10px; }
+
+.group td:nth-child(-n+2) input {
+  border-bottom: 1px dashed gray;
+  padding: 10px;
+  transition: border-bottom 0.3s ease; }
+  .group td:nth-child(-n+2) input:focus {
+    border-bottom: 1px solid orange; }
+
+.group td:nth-child(n+3) input {
+  width: 90px; }
+
+input[type="button"] {
+  background-color: transparent;
+  border: 2px solid #7b7b7b;
+  background: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease; }
+  input[type="button"]:hover, input[type="button"]:focus {
+    border: 2px solid orange; }
+  input[type="button"]:active {
+    background-color: orange;
+    color: white; }
+
+#results {
+  margin-top: 10px; }
+
+.groupChar {
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0; }
+  .groupChar span {
+    background-color: #333;
+    color: #fff;
+    border-radius: 12px;
+    display: inline-block;
+    height: 24px;
+    margin-right: 6px;
+    text-align: center;
+    width: 24px; }
