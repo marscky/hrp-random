@@ -78,6 +78,9 @@ $('#randomise').click(function () {
     function (index, value) {
       $result.append(getElement(value, $group.eq(index).find('.class').val()));
     });
+  $('body').animate({
+    scrollTop: $result.prev().offset().top
+  });
 
   function getElement (groupChar, className) {
     return '<li class="groupChar"><span>'+groupChar+'</span>'+className+'</li>';
