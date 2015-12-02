@@ -88,10 +88,7 @@ $('#randomise').click(function () {
     $resultCount.append(getElement(groupChar, count));
   });
 
-  $('body').animate({
-    scrollTop: $('#results').offset().top
-  });
-
+  $('#results')[0].scrollIntoView();
   function getElement (groupChar, className) {
     return '<li class="groupChar"><span>'+groupChar+'</span> '+className+'</li>';
   }
