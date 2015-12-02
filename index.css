@@ -55,6 +55,9 @@ input[type="button"] {
 #results {
   margin-top: 10px; }
 
+ul {
+  padding: 0; }
+
 .groupChar {
   list-style-type: none;
   margin: 5px 0;

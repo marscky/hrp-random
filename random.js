@@ -57,7 +57,9 @@ $groups
 $('#randomise').click(function () {
   var hasError = false;
   var $group = $('.group');
-  var $result = $('#results');
+  var $resultList = $('#resultList');
+  var $resultCount = $('#resultCount');
+  var counts = {};
 
   // Check no empty input first
   $('.class').each(function () {
@@ -72,14 +74,22 @@ $('#randomise').click(function () {
     }
   });
 
-  $result.html('');
+  $resultList.html('');
   $.each(
     randomise(Number($('#typenum').val()), $group.length) || [],
     function (index, value) {
-      $result.append(getElement(value, $group.eq(index).find('.class').val()));
+      var num = Number($group.eq(index).find('.studentnum').val());
+      counts[value] = counts[value] ? counts[value]+num : num;
+      $resultList.append(getElement(value, $group.eq(index).find('.class').val()));
     });
+
+  $resultCount.html('');
+  $.each(counts, function (groupChar, count) {
+    $resultCount.append(getElement(groupChar, count));
+  });
+
   $('body').animate({
-    scrollTop: $result.prev().offset().top
+    scrollTop: $('#results').offset().top
   });
 
   function getElement (groupChar, className) {
