@@ -83,7 +83,7 @@ $('#randomise').click(function () {
   });
 
   function getElement (groupChar, className) {
-    return '<li class="groupChar"><span>'+groupChar+'</span>'+className+'</li>';
+    return '<li class="groupChar"><span>'+groupChar+'</span> '+className+'</li>';
   }
 });
 
